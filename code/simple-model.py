@@ -21,7 +21,6 @@ class SimpleModel:
         self.h1 = sigmoid(self.z1)  
         self.z2 = self.W2 @ self.h1 + self.b2 
         self.y_hat = sigmoid(self.z2) 
-
         return self.y_hat
     
     def updateState(self, y):
@@ -33,5 +32,4 @@ class SimpleModel:
         self.b2 = self.b2 + self.lr * delta
     
     def changeLr(self, lr):
-        """For the lr experiment"""
         self.lr = lr
